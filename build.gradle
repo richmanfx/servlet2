@@ -1,0 +1,23 @@
+group 'ru.r5am'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    jcenter()
+}
+
+dependencies {
+    compile 'org.freemarker:freemarker:+'
+    compile 'javax:javaee-api:+'
+    testCompile 'org.testng:testng:+'
+}
