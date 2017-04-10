@@ -14,21 +14,24 @@ import static freemarker.template.Configuration.VERSION_2_3_26;
 
 public class PageGenerator {
     private static final Configuration CFG = new Configuration(VERSION_2_3_26);
-    private static final String HTML_DIR = "src" + File.separator +
-                                           "main" + File.separator +
-                                           "resources" + File.separator +
-                                           "templates";
+//    private static final String HTML_DIR = "src" + File.separator +
+//                                           "main" + File.separator +
+//                                           "resources" + File.separator +
+//                                           "templates";
+
+    private static final String HTML_DIR = "resources" + File.separator + "templates";
 
     public static String getPage(String filename, Map<String, Object> data) {
 
         // Посмотрим путь, откуда мы стартуем
-        String currentDir = new File("").getAbsolutePath();
+//        String currentDir = new File("").getAbsolutePath();
 //        System.out.println(currentDir);
 
 
 
         Writer stream = new StringWriter();
-        String templateFullPath = currentDir + File.separator + HTML_DIR;
+//        String templateFullPath = currentDir + File.separator + HTML_DIR;
+        String templateFullPath = HTML_DIR;
         try {
             CFG.setDirectoryForTemplateLoading(new File(templateFullPath));
             Template template = CFG.getTemplate(filename);
