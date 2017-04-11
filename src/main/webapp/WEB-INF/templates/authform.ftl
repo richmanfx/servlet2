@@ -5,7 +5,7 @@
     <title>Authorization</title>
 </head>
 <body>
-    <form action="/authform" method="POST">
+    <form action="/servlet2" method="POST">
         Login: <input type="text" name="login" title="Login"/>
                <input type="submit" value="OK"/>
     </form>

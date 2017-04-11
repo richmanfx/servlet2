@@ -18,7 +18,7 @@ public class Frontend extends HttpServlet{
         Map<String, Object> pageVariables = new HashMap<>();
         pageVariables.put("lastLogin", login == null ? "" : login);
 
-        response.getWriter().println(PageGenerator.getPage("authform.html", pageVariables));
+        response.getWriter().println(PageGenerator.getPage("authform.ftl", pageVariables));
 
         response.setContentType("text/html;charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
@@ -40,6 +40,6 @@ public class Frontend extends HttpServlet{
         Map<String, Object> pageVariables = new HashMap<>();
         pageVariables.put("lastLogin", login == null ? "" : login);
 
-        response.getWriter().println(PageGenerator.getPage("authform.html", pageVariables));
+        response.getWriter().println(PageGenerator.getPage("authform.ftl", pageVariables));
     }
 }
