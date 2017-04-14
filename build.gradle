@@ -17,7 +17,10 @@ repositories {
 }
 
 dependencies {
-    compile 'org.freemarker:freemarker:+'
-    compile 'javax:javaee-api:+'
+//    compile 'org.freemarker:freemarker:+'
+//    compile 'org.thymeleaf:thymeleaf:3.0.3.RELEASE'
+    compile 'org.thymeleaf:thymeleaf:+'
+//    compile 'javax:javaee-web-api:+'
+    compile 'javax.servlet:javax.servlet-api:+'
     testCompile 'org.testng:testng:+'
 }
